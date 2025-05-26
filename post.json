@@ -1,0 +1,16 @@
+{
+    "nome_serie": "Breaking Bad",
+    "descricao": "Descricao",
+    "atores":[
+        {
+            "nome": "Bryan",
+            "personagens": "Walter"
+        },
+        {
+            "nome":"Aaron",
+            "personagens":"Jesse"
+        }
+    ],
+    "categoria": "Drama",
+    "ano_lancamento": 2008
+}
