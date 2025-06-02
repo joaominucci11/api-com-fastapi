@@ -1,40 +1,36 @@
-# app/models.py
 from pydantic import BaseModel
 from typing import Optional
 
-
 class AtorGetPost(BaseModel):
-    nome: str
-    personagem: str
+    nome: str = "Nome do ator"
 
 class SerieGetPost(BaseModel):
-    titulo: str
-    descricao: str
-    ano_lancamento: int
-    id_categoria: int
+    titulo: str = "Título da série"
+    descricao: str = "Descrição da série"
+    ano_lancamento: int = 2023
+    id_categoria: int = 1
 
 class CategoriaGetPost(BaseModel):
-    nome: str
+    nome: str = "Nome da categoria"
 
 class MotivoAssistirGetPost(BaseModel):
-    idserie: int
-    motivo: str
+    idserie: int = 1
+    motivo: str = "Motivo para assistir"
 
-#===========================================================================================================================
+#==============================================================
 
 class AtorPutDelete(BaseModel):
-    nome: Optional[str] = None
-    personagem: Optional[str] = None
+    nome: Optional[str] = "Nome do ator"
 
-class SeriePutDelete(BaseModel):
-    titulo: Optional[str] = None
-    descricao: Optional[str] = None
-    ano_lancamento: Optional[int] = None
-    id_categoria: Optional[int] = None
+class SeriePutDelete(BaseModel): #validator do pydantic
+    titulo: Optional[str] = "Título da série"
+    descricao: Optional[str] = "Descrição da série"
+    ano_lancamento: Optional[int] = 2023
+    id_categoria: Optional[int] = 1
 
 class CategoriaPutDelete(BaseModel):
-    nome: Optional[str] = None
+    nome: Optional[str] = "Nome da categoria"
 
 class MotivoAssistirPutDelete(BaseModel):
-    idserie: Optional[int] = None
-    motivo: Optional[str] = None
+    idserie: Optional[int] = 1
+    motivo: Optional[str] = "Motivo para assistir"
